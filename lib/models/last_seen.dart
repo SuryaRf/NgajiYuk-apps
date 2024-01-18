@@ -9,11 +9,11 @@ class LastSeen {
 
 List<LastSeen> lastSeen = [
   LastSeen(
-      imgAsset: 'assets/images/lastseen1',
+      imgAsset: 'assets/images/lastseen1.jpeg',
       title: 'Belajar Huruf Hijaiyah',
       bookmark: 'Video Tersimpan'),
   LastSeen(
-      imgAsset: 'assets/images/lastseen2',
+      imgAsset: 'assets/images/lastseen2.jpg',
       title: 'Mengenal Jenis Tajwid',
       bookmark: 'Video Tersimpan'),
 ];

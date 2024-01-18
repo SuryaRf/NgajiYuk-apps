@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ngajiyuk/choose_page/choose_page.dart';
 import 'package:ngajiyuk/home_page/home_page.dart';
 import 'package:ngajiyuk/start_screen/start_screen.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
          colorScheme: const ColorScheme.dark(primary: Color(0xff030637)),
          useMaterial3: true,
       ),
-      home: HomePage(),
+      home: StartScreen(),
     );
   }
 }

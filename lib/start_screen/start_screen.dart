@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ngajiyuk/choose_page/choose_page.dart';
 import 'package:ngajiyuk/constant/color.dart';
 import 'package:ngajiyuk/constant/text.dart';
 import 'package:ngajiyuk/home_page/home_page.dart';
@@ -94,7 +95,7 @@ class StartScreen extends StatelessWidget {
                 child: Center(
                   child: InkWell(
                     onTap: () {
-                      // Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ChoosePage()));
                     },
                     child: Text(
                       'Mulai Belajar',
