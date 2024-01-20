@@ -3,6 +3,7 @@ import 'package:ngajiyuk/constant/category.dart';
 import 'package:ngajiyuk/constant/color.dart';
 import 'package:ngajiyuk/constant/text.dart';
 import 'package:ngajiyuk/models/last_seen.dart';
+import 'package:ngajiyuk/models/list_video.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -159,7 +160,7 @@ class _HomePageState extends State<HomePage> {
                               Center(child: Text(category[index].name)),
                               Container(
                                 height: 4,
-                                width: 20,
+                                width: 30,
                                 color: isSelectedIndex == index ? defaultColor : Colors.transparent,
                               )
                             ],
@@ -170,6 +171,72 @@ class _HomePageState extends State<HomePage> {
                     );
                   },
                 ),
+              ),
+
+              SizedBox(
+               height: bodyApp * 0.2,
+                width: widthApp,
+                child: ListView.builder(
+                 scrollDirection: Axis.horizontal,
+                 itemCount: listVideo.length,
+                  itemBuilder: (context, index){
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(listVideo[index].image),
+                          const SizedBox(height: 7,),
+                          Text(listVideo[index].title, style: subText.copyWith(fontWeight: FontWeight.w500),),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: Text(listVideo[index].description, style: subText.copyWith(fontWeight: FontWeight.w200, fontSize: 10),),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }),
+              ),
+              const SizedBox(height: 20,),
+              SizedBox(
+               height: bodyApp * 0.2,
+                width: widthApp,
+                child: ListView.builder(
+                 scrollDirection: Axis.horizontal,
+                 itemCount: listVideo.length,
+                  itemBuilder: (context, index){
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(listVideo[index].image),
+                          const SizedBox(height: 7,),
+                          Text(listVideo[index].title, style: subText.copyWith(fontWeight: FontWeight.w500),),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: Text(listVideo[index].description, style: subText.copyWith(fontWeight: FontWeight.w200, fontSize: 10),),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }),
               )
             ],
           ),
